@@ -1,0 +1,35 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	tags: string[];
+	slug: string;
+	category: string;
+}
+
+const { title, description, tags, slug, category } = Astro.props;
+---
+
+<div class="group relative bg-slate-900/40 border border-slate-800/80 rounded-xl p-6 hover:border-orange-500/40 transition-all hover:shadow-2xl hover:shadow-orange-500/[0.02]">
+	<span class="absolute top-4 right-4 text-[10px] font-mono tracking-wider uppercase text-slate-500 bg-slate-950 border border-slate-800/60 px-2 py-0.5 rounded">
+		{category}
+	</span>
+	
+	<h3 class="text-xl font-bold text-slate-100 group-hover:text-orange-400 transition-colors mb-2">
+		<a href={`/projects/${slug}`}>
+			{title} <span class="inline-block translate-x-0 group-hover:translate-x-1 transition-transform text-sm">→</span>
+		</a>
+	</h3>
+	
+	<p class="text-sm text-slate-400 line-clamp-2 mb-4 leading-relaxed">
+		{description}
+	</p>
+	
+	<div class="flex flex-wrap gap-1.5">
+		{tags.map((tag) => (
+			<span class="text-xs font-mono bg-slate-950 text-slate-400 border border-slate-800 px-2 py-0.5 rounded">
+				{tag}
+			</span>
+		))}
+	</div>
+</div>
