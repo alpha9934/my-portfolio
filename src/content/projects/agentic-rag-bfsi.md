@@ -2,7 +2,7 @@
 title: "Production-Grade Agentic RAG: Overcoming Hallucinations in BFSI"
 description: "Architected a dual-agent evaluation pipeline that reduced silent production failures and quantified faithfulness using RAGAS and LangFuse."
 publishDate: 2026-05-15
-githubUrl: "https://github.com/alpha9934/agentic-rag-bfsi"
+githubUrl: "https://github.com/alpha9934/TradeSage-AI"
 tags: ["Python", "Agentic AI", "RAGAS", "LangFuse", "GitHub Actions"]
 category: "GenAI"
 ---

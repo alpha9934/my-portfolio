@@ -5,11 +5,10 @@ const projectsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    publishDate: z.date(),
-    githubUrl: z.string().url(),
-    liveUrl: z.string().url().optional(),
     tags: z.array(z.string()),
-    category: z.enum(['GenAI', 'Data Engineering', 'Infrastructure']),
+    category: z.string().optional(),
+    // Add this line to handle the repository link safely
+    githubUrl: z.string().url().optional(), 
   }),
 });
 
