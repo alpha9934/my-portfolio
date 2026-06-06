@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+// 1. Astro requires this exact named export function for dynamic routes
+export async function getStaticPaths() {
+  const projectEntries = await getCollection('projects');
+  return projectEntries.map(entry => ({
+    params: { slug: entry.slug }, 
+    props: { entry },
+  }));
+}
+
+// 2. Extract props for rendering
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={`${entry.data.title} | Technical Case Study`} description={entry.data.description}>
+  <article class="prose prose-invert max-w-none">
+    <div class="mb-8 border-b border-slate-800 pb-6">
+      <div class="flex items-center gap-3 text-xs font-mono text-orange-500 mb-3">
+        <span>{entry.data.category}</span>
+        <span class="text-slate-700">•</span>
+        <time>{entry.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</time>
+      </div>
+      
+      <h1 class="text-3xl md:text-4xl font-black text-slate-100 tracking-tight mb-4">{entry.data.title}</h1>
+      
+      <div class="flex flex-wrap gap-4 items-center justify-between mt-6">
+        <div class="flex flex-wrap gap-1.5">
+          {entry.data.tags.map((tag) => (
+            <span class="text-xs font-mono bg-slate-900 text-slate-400 border border-slate-800 px-2.5 py-0.5 rounded">
+              {tag}
+            </span>
+          ))}
+        </div>
+        
+        <a href={entry.data.githubUrl} target="_blank" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-orange-400 transition-colors bg-slate-900 border border-slate-800/80 px-3 py-1.5 rounded-lg">
+          View Source on GitHub →
+        </a>
+      </div>
+    </div>
+
+    <div class="text-slate-3xl leading-relaxed space-y-6 text-slate-3xl font-normal max-w-3xl">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  /* Base structural layout parameters for raw markdown items */
+  .prose h2 { @apply text-xl font-bold text-slate-100 mt-10 mb-4 tracking-tight flex items-center gap-2; }
+  .prose p { @apply text-slate-400 mb-4 leading-relaxed text-sm md:text-base; }
+  .prose ul { @apply list-disc list-inside text-slate-400 space-y-2 text-sm md:text-base mb-4 pl-2; }
+  .prose strong { @apply text-slate-200 font-semibold; }
+</style>
