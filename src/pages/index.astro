@@ -3,9 +3,13 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 
-// Query the storage layers and sort them dynamically
+// Query the storage layers and sort them dynamically safely
 const allProjects = await getCollection('projects');
-const sortedProjects = allProjects.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf());
+const sortedProjects = allProjects.sort((a, b) => {
+  const dateB = b.data.publishDate ? b.data.publishDate.valueOf() : 0;
+  const dateA = a.data.publishDate ? a.data.publishDate.valueOf() : 0;
+  return dateB - dateA;
+});
 ---
 
 <Layout title="Abhishek Kumar Gupta | Senior GenAI & Data Engineer Portfolio">
@@ -33,6 +37,7 @@ const sortedProjects = allProjects.sort((a, b) => b.data.publishDate.valueOf() -
 					tags={project.data.tags}
 					slug={project.slug}
 					category={project.data.category}
+					githubUrl={project.data.githubUrl}
 				/>
 			))}
 		</div>

@@ -2,7 +2,7 @@
 title: "ArXiv Research Paper Intelligence Bot"
 description: "Developed an open-source automated RAG bot that continuously monitors, indexes, and queries newly published machine learning research papers."
 publishDate: 2026-03-05
-githubUrl: "https://github.com/alpha9934/arxiv-research-bot"
+githubUrl: "https://github.com/alpha9934/ArXiv-GenAI-Research-Paper-Answer-Bot-Agentic-RAG-System"
 tags: ["Python", "Streamlit", "Vector DB", "RAG", "LLM"]
 category: "GenAI"
 ---
