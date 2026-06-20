@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Abhishek Kumar Gupta | Senior AI Engineer</title>
-  <meta name="description" content="Senior AI Engineer specialising in MCP architecture, Agentic RAG pipelines, LLMOps, and production-grade GenAI systems." />
-  <meta property="og:title" content="Abhishek Kumar Gupta | Senior AI Engineer" />
-  <meta property="og:description" content="I build AI systems that don't fail in production. MCP, Agentic RAG, LLMOps." />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <meta name="description" content="Senior AI Engineer specialising in MCP architecture, Agentic RAG, LLMOps, and production-grade GenAI systems."/>
+  <meta property="og:title" content="Abhishek Kumar Gupta | Senior AI Engineer"/>
+  <meta property="og:description" content="I build AI systems that don't fail in production. MCP, Agentic RAG, LLMOps, dual-LLM orchestration."/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
       --bg:#050510;--bg2:#080820;--bg3:#0a0a18;
-      --surface:#0f0f28;--surface2:#14143a;
-      --border:rgba(120,100,255,.12);--border2:rgba(120,100,255,.22);--border3:rgba(120,100,255,.38);
+      --surface:#0f0f28;--surface2:#14143a;--surface3:#191940;
+      --border:rgba(120,100,255,.1);--border2:rgba(120,100,255,.2);--border3:rgba(120,100,255,.35);
       --text:#e8e8ff;--text2:#8888bb;--text3:#44446a;
-      --accent:#7c6fff;--accent2:#b09fff;--accent-g:rgba(124,111,255,.15);
-      --teal:#00e5c0;--teal-dim:rgba(0,229,192,.08);--teal-b:rgba(0,229,192,.25);
-      --pink:#ff6eb4;--amber:#ffb547;--cyan:#00d4ff;
+      --accent:#7c6fff;--accent2:#b09fff;--ag:rgba(124,111,255,.15);
+      --teal:#00e5c0;--tdim:rgba(0,229,192,.08);--tb:rgba(0,229,192,.22);
+      --pink:#ff6eb4;--amber:#ffb547;--cyan:#00d4ff;--red:#ff5577;
       --sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
     }
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     a{color:inherit;text-decoration:none}
     #bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
-    .page-wrap{position:relative;z-index:1}
+    .wrap{position:relative;z-index:1}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:54px;background:rgba(5,5,16,.8);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:.5px solid var(--border)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:54px;background:rgba(5,5,16,.82);backdrop-filter:blur(24px);border-bottom:.5px solid var(--border)}
     .nav-logo{font-family:var(--mono);font-size:12px;color:var(--accent2);letter-spacing:.5px;display:flex;align-items:center;gap:8px}
     .nav-logo::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pdot 2s ease-in-out infinite}
     @keyframes pdot{0%,100%{opacity:1;box-shadow:0 0 8px var(--teal)}50%{opacity:.3;box-shadow:0 0 22px var(--teal)}}
@@ -40,7 +39,7 @@
     .nav-links a{font-size:12px;color:var(--text3);transition:color .2s}
     .nav-links a:hover{color:var(--accent2)}
     .nav-pill{font-size:11px;font-family:var(--mono);padding:5px 14px;border-radius:6px;border:.5px solid var(--accent);color:var(--accent2);background:transparent;transition:all .2s;display:inline-block}
-    .nav-pill:hover{background:var(--accent-g);box-shadow:0 0 16px rgba(124,111,255,.3)}
+    .nav-pill:hover{background:var(--ag);box-shadow:0 0 16px rgba(124,111,255,.3)}
 
     /* HERO */
     .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:7rem 2.5rem 5rem;position:relative;overflow:hidden}
@@ -58,7 +57,7 @@
     .badge-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:2.5rem}
     .badge{font-family:var(--mono);font-size:10px;padding:4px 11px;border-radius:4px;border:.5px solid var(--border2);color:var(--text3);background:rgba(15,15,40,.6);backdrop-filter:blur(8px);transition:all .25s;cursor:default}
     .badge:hover{border-color:var(--accent);color:var(--accent2);box-shadow:0 0 12px rgba(124,111,255,.25);transform:translateY(-1px)}
-    .badge.hi{border-color:var(--teal-b);color:var(--teal);background:var(--teal-dim);box-shadow:0 0 8px rgba(0,229,192,.1)}
+    .badge.hi{border-color:var(--tb);color:var(--teal);background:var(--tdim);box-shadow:0 0 8px rgba(0,229,192,.1)}
     .badge.hi:hover{box-shadow:0 0 18px rgba(0,229,192,.3);transform:translateY(-1px)}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
     .btn-p{padding:10px 24px;border-radius:7px;font-size:13px;font-weight:500;background:linear-gradient(135deg,var(--accent),#9b8aff);color:#fff;border:none;cursor:pointer;font-family:var(--sans);transition:all .2s;display:inline-block;box-shadow:0 0 20px rgba(124,111,255,.3)}
@@ -77,57 +76,93 @@
     .metric-val .t{color:var(--teal)}
     .metric-label{font-size:10px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:1.2px}
 
-    /* SECTIONS */
+    /* SECTION */
     section{padding:5rem 2.5rem}
     .sec-eye{font-family:var(--mono);font-size:10px;color:var(--teal);text-transform:uppercase;letter-spacing:2px;display:flex;align-items:center;gap:8px;margin-bottom:.9rem}
     .sec-eye::before{content:'';width:18px;height:1px;background:var(--teal)}
     h2.sec-title{font-size:1.75rem;font-weight:600;letter-spacing:-.5px;margin-bottom:.65rem}
-    .sec-sub{color:var(--text2);font-size:.9rem;max-width:500px;margin-bottom:3rem;line-height:1.8}
+    .sec-sub{color:var(--text2);font-size:.9rem;max-width:540px;margin-bottom:3rem;line-height:1.8}
 
-    /* FEATURED CARD */
-    .feat-card{border:.5px solid var(--border2);border-radius:16px;background:rgba(15,15,40,.6);backdrop-filter:blur(20px);overflow:hidden;margin-bottom:1.5rem;transition:border-color .3s,box-shadow .3s;position:relative}
-    .feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--teal),transparent);opacity:.6}
-    .feat-card:hover{border-color:var(--border3);box-shadow:0 0 60px rgba(124,111,255,.1),0 0 100px rgba(0,229,192,.05)}
-    .feat-top{padding:2rem;border-bottom:.5px solid var(--border)}
-    .feat-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1.25rem}
-    .feat-badge{font-family:var(--mono);font-size:10px;letter-spacing:.5px;text-transform:uppercase;padding:3px 10px;border-radius:4px}
-    .fb-ai{background:rgba(124,111,255,.12);color:var(--accent2);border:.5px solid var(--accent)}
-    .fb-mcp{background:var(--teal-dim);color:var(--teal);border:.5px solid var(--teal-b);box-shadow:0 0 8px rgba(0,229,192,.15)}
-    .fb-fin{background:rgba(255,181,71,.08);color:var(--amber);border:.5px solid rgba(255,181,71,.3)}
-    .feat-card h3{font-size:1.15rem;font-weight:600;margin-bottom:.65rem;letter-spacing:-.3px}
-    .feat-desc{font-size:.875rem;color:var(--text2);line-height:1.8;margin-bottom:1.25rem}
-    .arch-flow{background:rgba(5,5,16,.7);border:.5px solid var(--border2);border-radius:10px;padding:1.4rem 1.75rem;font-family:var(--mono);font-size:11px;color:var(--text2);line-height:2;backdrop-filter:blur(8px)}
-    .layer{display:flex;align-items:flex-start;gap:10px;margin:2px 0}
-    .layer-name{color:var(--accent2);min-width:165px;font-size:10px;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
-    .layer-tools{color:var(--text3)}
-    .layer-tools b{color:var(--text2);font-weight:500}
-    .arch-arrow{color:var(--border3);margin:1px 0 1px 10px;font-size:14px}
-    .feat-bottom{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:.5px solid var(--border)}
-    .feat-stat{padding:1rem 1.25rem;border-right:.5px solid var(--border)}
-    .feat-stat:last-child{border-right:none}
-    .feat-stat-label{font-size:10px;color:var(--text3);font-family:var(--mono);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-    .feat-stat-val{color:var(--teal);font-family:var(--mono);font-size:12px;font-weight:500}
-    .feat-techs{display:flex;flex-wrap:wrap;gap:5px;padding:1rem 2rem 0}
-    .feat-link{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:var(--accent2);font-family:var(--mono);padding:1rem 2rem;border-top:.5px solid var(--border);transition:color .15s}
-    .feat-link:hover{color:var(--teal)}
+    /* ── PROJECT TABS ── */
+    .proj-tabs{display:flex;gap:2px;margin-bottom:2rem;background:var(--surface);border:.5px solid var(--border);border-radius:10px;padding:4px;width:fit-content}
+    .ptab{font-family:var(--mono);font-size:11px;padding:6px 16px;border-radius:7px;cursor:pointer;color:var(--text3);transition:all .2s;border:none;background:transparent;white-space:nowrap}
+    .ptab:hover{color:var(--text2)}
+    .ptab.active{background:var(--surface2);color:var(--accent2);border:.5px solid var(--border2);box-shadow:0 0 12px rgba(124,111,255,.2)}
 
-    /* TECH PILL */
-    .tech{font-family:var(--mono);font-size:10px;padding:2px 8px;border-radius:3px;background:rgba(15,15,40,.8);color:var(--text3);border:.5px solid var(--border);transition:all .2s}
+    /* ── PROJECT CARDS GRID ── */
+    .proj-panel{display:none}
+    .proj-panel.active{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+
+    /* CARD */
+    .pcard{
+      background:rgba(10,10,28,.7);border:.5px solid var(--border2);border-radius:14px;
+      overflow:hidden;display:flex;flex-direction:column;
+      transition:transform .25s,border-color .25s,box-shadow .25s;
+      backdrop-filter:blur(16px);position:relative;
+    }
+    .pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
+    .pcard:hover{transform:translateY(-4px);border-color:var(--border3);box-shadow:0 12px 48px rgba(124,111,255,.15),0 0 80px rgba(0,229,192,.04)}
+    .pcard:hover::before{opacity:.8}
+
+    /* card top bar */
+    .pcard-bar{padding:1.4rem 1.5rem 0;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+    .pcard-badges{display:flex;gap:6px;flex-wrap:wrap}
+    .pbadge{font-family:var(--mono);font-size:9px;letter-spacing:.5px;text-transform:uppercase;padding:2px 9px;border-radius:3px}
+    .pb-ai{background:rgba(124,111,255,.12);color:var(--accent2);border:.5px solid var(--accent)}
+    .pb-mcp{background:var(--tdim);color:var(--teal);border:.5px solid var(--tb);box-shadow:0 0 6px rgba(0,229,192,.12)}
+    .pb-fin{background:rgba(255,181,71,.08);color:var(--amber);border:.5px solid rgba(255,181,71,.28)}
+    .pb-inf{background:rgba(0,212,255,.08);color:var(--cyan);border:.5px solid rgba(0,212,255,.25)}
+    .pb-ins{background:rgba(255,85,119,.08);color:var(--red);border:.5px solid rgba(255,85,119,.25)}
+    .pb-rs{background:rgba(176,159,255,.08);color:var(--accent2);border:.5px solid rgba(176,159,255,.25)}
+    .pcard-icon{width:36px;height:36px;border-radius:8px;background:var(--ag);border:.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--accent2);flex-shrink:0;transition:box-shadow .2s}
+    .pcard:hover .pcard-icon{box-shadow:0 0 14px rgba(124,111,255,.4)}
+
+    /* card body */
+    .pcard-body{padding:1rem 1.5rem 1.25rem;flex:1;display:flex;flex-direction:column}
+    .pcard-title{font-size:1rem;font-weight:600;letter-spacing:-.2px;margin-bottom:.5rem;line-height:1.4}
+    .pcard-desc{font-size:.82rem;color:var(--text2);line-height:1.75;margin-bottom:1rem;flex:1}
+
+    /* architecture reveal */
+    .arch-toggle{
+      font-family:var(--mono);font-size:10px;color:var(--text3);
+      cursor:pointer;display:flex;align-items:center;gap:6px;margin-bottom:.75rem;
+      transition:color .2s;user-select:none;
+    }
+    .arch-toggle:hover{color:var(--accent2)}
+    .arch-toggle .arrow{transition:transform .25s;display:inline-block}
+    .arch-toggle.open .arrow{transform:rotate(90deg)}
+    .arch-box{
+      background:rgba(5,5,16,.8);border:.5px solid var(--border);border-radius:8px;
+      font-family:var(--mono);font-size:10px;color:var(--text3);line-height:1.85;
+      max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease;
+    }
+    .arch-box.open{max-height:300px;padding:.9rem 1rem;margin-bottom:.75rem}
+    .al{display:flex;gap:8px;margin:1px 0}
+    .al-n{color:var(--accent2);min-width:120px;font-size:9px;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
+    .al-v{color:var(--text3)}
+    .al-v b{color:var(--text2);font-weight:500}
+    .aa{color:var(--border2);margin:0 0 0 8px;font-size:12px;line-height:1}
+
+    /* tech row */
+    .tech-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1.1rem}
+    .tech{font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:3px;background:rgba(15,15,40,.9);color:var(--text3);border:.5px solid var(--border);transition:all .2s}
     .tech:hover{border-color:var(--accent);color:var(--accent2)}
 
-    /* PROJECTS GRID */
-    .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border);border:.5px solid var(--border2);border-radius:14px;overflow:hidden;margin-top:1.5rem}
-    .proj-card{background:rgba(8,8,32,.85);padding:1.75rem;display:flex;flex-direction:column;transition:background .25s;backdrop-filter:blur(12px);position:relative;overflow:hidden}
-    .proj-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
-    .proj-card:hover{background:rgba(20,20,60,.9)}
-    .proj-card:hover::after{opacity:.5}
-    .proj-cat{font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;width:fit-content;margin-bottom:1rem;background:rgba(124,111,255,.1);color:var(--accent2);border:.5px solid var(--accent);transition:box-shadow .2s}
-    .proj-card:hover .proj-cat{box-shadow:0 0 12px rgba(124,111,255,.3)}
-    .proj-card h3{font-size:.95rem;font-weight:500;margin-bottom:.65rem;line-height:1.45}
-    .proj-card p{font-size:.83rem;color:var(--text2);line-height:1.7;flex:1;margin-bottom:1rem}
-    .tech-row{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1rem}
-    .proj-link{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text3);font-family:var(--mono);margin-top:auto;transition:color .15s}
-    .proj-link:hover{color:var(--accent2)}
+    /* card footer */
+    .pcard-foot{border-top:.5px solid var(--border);padding:.9rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+    .pcard-link{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text3);font-family:var(--mono);transition:color .15s}
+    .pcard-link:hover{color:var(--accent2)}
+    .pcard-stat{font-family:var(--mono);font-size:10px;color:var(--text3);display:flex;align-items:center;gap:4px}
+    .pcard-stat span{color:var(--teal)}
+
+    /* FEATURED LABEL */
+    .feat-label{
+      display:inline-flex;align-items:center;gap:6px;
+      font-family:var(--mono);font-size:9px;text-transform:uppercase;letter-spacing:1px;
+      color:var(--amber);border:.5px solid rgba(255,181,71,.3);
+      background:rgba(255,181,71,.06);padding:2px 8px;border-radius:3px;margin-bottom:.5rem;
+    }
+    .feat-label::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--amber);animation:pdot 1.5s ease-in-out infinite}
 
     /* SKILLS */
     .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
@@ -135,7 +170,7 @@
     .sk-card::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--accent2),transparent);transition:left .5s}
     .sk-card:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(124,111,255,.1)}
     .sk-card:hover::before{left:100%}
-    .sk-icon{width:38px;height:38px;border-radius:8px;background:rgba(124,111,255,.1);border:.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:19px;color:var(--accent2);margin-bottom:1rem;transition:box-shadow .2s}
+    .sk-icon{width:38px;height:38px;border-radius:8px;background:var(--ag);border:.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:19px;color:var(--accent2);margin-bottom:1rem;transition:box-shadow .2s}
     .sk-card:hover .sk-icon{box-shadow:0 0 16px rgba(124,111,255,.4)}
     .sk-card h3{font-size:.875rem;font-weight:500;margin-bottom:.4rem}
     .sk-desc{font-size:.8rem;color:var(--text2);line-height:1.65;margin-bottom:.75rem}
@@ -152,7 +187,7 @@
     .cc:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(124,111,255,.12)}
     .cc:hover::before{opacity:1}
     .cc.full{grid-column:1/-1}
-    .cc-icon{width:42px;height:42px;border-radius:10px;background:rgba(124,111,255,.1);border:.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent2);flex-shrink:0;transition:box-shadow .2s}
+    .cc-icon{width:42px;height:42px;border-radius:10px;background:var(--ag);border:.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent2);flex-shrink:0;transition:box-shadow .2s}
     .cc:hover .cc-icon{box-shadow:0 0 16px rgba(124,111,255,.4)}
     .cc-label{font-size:10px;color:var(--text3);font-family:var(--mono);margin-bottom:3px}
     .cc-val{font-size:.875rem;color:var(--text);font-weight:500}
@@ -176,12 +211,8 @@
       .metric:nth-child(3),.metric:nth-child(4){border-top:.5px solid var(--border)}
       section{padding:3.5rem 1.25rem}
       .div{margin:0 1.25rem}
-      .feat-top{padding:1.5rem}
-      .feat-techs{padding:.75rem 1.5rem 0}
-      .feat-link{padding:.75rem 1.5rem}
-      .feat-bottom{grid-template-columns:1fr}
-      .feat-stat{border-right:none;border-top:.5px solid var(--border)}
-      .feat-stat:first-child{border-top:none}
+      .proj-panel.active{grid-template-columns:1fr}
+      .proj-tabs{flex-wrap:wrap}
       .contact-grid{grid-template-columns:1fr}
       .cc.full{grid-column:auto}
       footer{flex-direction:column;gap:.5rem;text-align:center}
@@ -190,8 +221,9 @@
 </head>
 <body>
 <canvas id="bg-canvas"></canvas>
-<div class="page-wrap">
+<div class="wrap">
 
+<!-- NAV -->
 <nav>
   <span class="nav-logo">alpha9934.dev</span>
   <div class="nav-links">
@@ -202,6 +234,7 @@
   <a class="nav-pill" href="https://github.com/alpha9934" target="_blank" rel="noopener">GitHub &#8599;</a>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
@@ -217,9 +250,10 @@
     <span class="badge">LangFuse</span>
     <span class="badge">RAGAS</span>
     <span class="badge">FastAPI</span>
-    <span class="badge">Vector DB</span>
+    <span class="badge">LangChain</span>
+    <span class="badge">Pinecone</span>
     <span class="badge">AWS</span>
-    <span class="badge">Snowflake</span>
+    <span class="badge">Docker</span>
     <span class="badge">Python</span>
   </div>
   <div class="hero-actions">
@@ -228,6 +262,7 @@
   </div>
 </div>
 
+<!-- METRICS -->
 <div class="metrics-wrap">
   <div class="metrics fade-in">
     <div class="metric"><div class="metric-val"><span class="a">5</span>+</div><div class="metric-label">Production AI Systems</div></div>
@@ -237,114 +272,273 @@
   </div>
 </div>
 
+<!-- PROJECTS -->
 <section id="projects">
   <div class="sec-eye">Featured Work</div>
   <h2 class="sec-title">Production AI Systems</h2>
-  <p class="sec-sub">Enterprise-grade architecture &mdash; not tutorials. Every project has a governance layer, evaluation gate, and audit trail.</p>
+  <p class="sec-sub">Enterprise-grade architecture &mdash; not tutorials. Every project ships with a governance layer, evaluation gate, and full audit trail. Click the architecture toggle on each card to see the system design.</p>
 
-  <div class="feat-card fade-in">
-    <div class="feat-top">
-      <div class="feat-badges">
-        <span class="feat-badge fb-ai">GenAI</span>
-        <span class="feat-badge fb-mcp">MCP</span>
-        <span class="feat-badge fb-fin">FinTech &middot; BFSI</span>
-      </div>
-      <h3>Compliance Risk Prediction System &mdash; Deloitte POC</h3>
-      <p class="feat-desc">AI-powered compliance risk scoring for a large financial institution. Ingests financial transactions, enriches them with KYC, sanctions, and policy context via MCP tools, scores with XGBoost + SHAP, generates plain-English reviewer explanations via a dual-LLM pipeline (Gemini Flash + Groq Llama 70B), and routes HIGH/MEDIUM risk cases to a human reviewer dashboard with an immutable hash-chain audit log. Full production architecture running at $7/month.</p>
-      <div class="arch-flow">
-        <div class="layer"><span class="layer-name">Ingestion</span><span class="layer-tools">Upstash Kafka &middot; Pydantic schema validation &middot; dead-letter queue</span></div>
-        <div class="arch-arrow">&#8595;</div>
-        <div class="layer"><span class="layer-name">Feature Engineering</span><span class="layer-tools">Velocity &middot; KYC &middot; geo &middot; behavioural &middot; <b>Upstash Redis cache</b></span></div>
-        <div class="arch-arrow">&#8595;</div>
-        <div class="layer"><span class="layer-name">MCP Layer</span><span class="layer-tools"><b>6 tools</b> &mdash; transaction ctx &middot; customer risk &middot; policy retrieval &middot; sanctions &middot; case similarity &middot; audit log</span></div>
-        <div class="arch-arrow">&#8595;</div>
-        <div class="layer"><span class="layer-name">ML Scorer</span><span class="layer-tools">XGBoost + SHAP &middot; &lt;50ms &middot; auditable feature attributions &middot; thresholds by jurisdiction</span></div>
-        <div class="arch-arrow">&#8595;</div>
-        <div class="layer"><span class="layer-name">Dual-LLM Pipeline</span><span class="layer-tools"><b>Explainer</b> (Gemini Flash) + <b>Judge</b> (Groq Llama 70B) &mdash; async &middot; hallucination-checked</span></div>
-        <div class="arch-arrow">&#8595;</div>
-        <div class="layer"><span class="layer-name">Governance Gate</span><span class="layer-tools">SHA-256 hash-chain audit &middot; policy citation verification &middot; output validation</span></div>
-        <div class="arch-arrow">&#8595;</div>
-        <div class="layer"><span class="layer-name">Reviewer Dashboard</span><span class="layer-tools">Streamlit on HF Spaces &middot; human always in loop &middot; immutable decision log</span></div>
-      </div>
-    </div>
-    <div class="feat-bottom">
-      <div class="feat-stat"><div class="feat-stat-label">Architecture Pattern</div><div class="feat-stat-val">MCP + Hybrid ML/LLM</div></div>
-      <div class="feat-stat"><div class="feat-stat-label">POC Cost</div><div class="feat-stat-val">$7 / month</div></div>
-      <div class="feat-stat"><div class="feat-stat-label">Prod Scale Equiv.</div><div class="feat-stat-val">500K txns / month</div></div>
-    </div>
-    <div class="feat-techs">
-      <span class="tech">Python</span><span class="tech">MCP SDK</span><span class="tech">XGBoost</span><span class="tech">SHAP</span><span class="tech">FastAPI</span><span class="tech">Gemini Flash</span><span class="tech">Groq Llama 70B</span><span class="tech">Neon Postgres</span><span class="tech">Upstash Kafka</span><span class="tech">Upstash Redis</span><span class="tech">Streamlit</span><span class="tech">GitHub Actions</span><span class="tech">Render</span>
-    </div>
-    <a class="feat-link" href="https://github.com/alpha9934/compliance-risk-poc" target="_blank" rel="noopener">
-      <i class="ti ti-brand-github"></i> View full codebase &amp; architecture
-    </a>
+  <!-- TABS -->
+  <div class="proj-tabs">
+    <button class="ptab active" data-tab="all">All Projects</button>
+    <button class="ptab" data-tab="rag">Agentic RAG</button>
+    <button class="ptab" data-tab="mcp">MCP Systems</button>
+    <button class="ptab" data-tab="ent">Enterprise AI</button>
   </div>
 
-  <div class="proj-grid fade-in">
-    <div class="proj-card">
-      <div class="proj-cat">GenAI &middot; BFSI</div>
-      <h3>Production Agentic RAG: Hallucination Elimination in BFSI</h3>
-      <p>Dual-agent evaluation pipeline with RAGAS faithfulness scoring and LangFuse observability. Strict quality gates catch silent production failures before they reach end-users.</p>
-      <div class="tech-row"><span class="tech">Agentic AI</span><span class="tech">RAGAS</span><span class="tech">LangFuse</span><span class="tech">GitHub Actions</span></div>
-      <a class="proj-link" href="https://github.com/alpha9934/TradeSage-AI" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> TradeSage-AI</a>
+  <!-- ALL -->
+  <div class="proj-panel active" id="tab-all">
+
+    <!-- P1: COMPLIANCE RISK — FEATURED -->
+    <div class="pcard" data-tags="mcp ent">
+      <div class="pcard-bar">
+        <div class="pcard-badges">
+          <span class="pbadge pb-mcp">MCP</span>
+          <span class="pbadge pb-ai">GenAI</span>
+          <span class="pbadge pb-fin">BFSI &middot; FinTech</span>
+        </div>
+        <div class="pcard-icon"><i class="ti ti-shield-check"></i></div>
+      </div>
+      <div class="pcard-body">
+        <div class="feat-label">&#9733; Featured &middot; Flagship Project</div>
+        <div class="pcard-title">Compliance Risk Prediction System &mdash; Deloitte POC</div>
+        <p class="pcard-desc">AI-powered compliance risk scoring for a large financial institution. MCP layer controls access to KYC, sanctions, and policy data. XGBoost + SHAP for auditable ML scoring. Dual-LLM pipeline (Gemini Flash + Groq Llama 70B) generates reviewer explanations with an immutable hash-chain audit log. Full production architecture at $7/month.</p>
+        <div class="arch-toggle" onclick="toggleArch(this)">
+          <span class="arrow">&#9658;</span> Architecture Flow
+        </div>
+        <div class="arch-box">
+          <div class="al"><span class="al-n">Ingestion</span><span class="al-v">Upstash Kafka &middot; Pydantic validation &middot; dead-letter queue</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">MCP Layer</span><span class="al-v"><b>6 tools</b> &mdash; KYC &middot; sanctions &middot; policy retrieval &middot; audit log</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">ML Scorer</span><span class="al-v">XGBoost + SHAP &middot; &lt;50ms &middot; SHAP feature attributions</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Dual-LLM</span><span class="al-v"><b>Explainer</b> Gemini Flash + <b>Judge</b> Groq Llama 70B</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Gov. Gate</span><span class="al-v">SHA-256 hash-chain &middot; citation check &middot; output validation</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech">Python</span><span class="tech">MCP SDK</span><span class="tech">XGBoost</span><span class="tech">SHAP</span><span class="tech">FastAPI</span><span class="tech">Gemini Flash</span><span class="tech">Groq Llama 70B</span><span class="tech">Neon Postgres</span><span class="tech">Upstash Kafka</span><span class="tech">Redis</span><span class="tech">Streamlit</span><span class="tech">Render</span>
+        </div>
+      </div>
+      <div class="pcard-foot">
+        <a class="pcard-link" href="https://github.com/alpha9934/compliance-risk-poc" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> compliance-risk-poc</a>
+        <span class="pcard-stat">Cost: <span>$7/mo</span></span>
+      </div>
     </div>
-    <div class="proj-card">
-      <div class="proj-cat">GenAI &middot; Research</div>
-      <h3>ArXiv Research Intelligence Bot &mdash; Live RAG</h3>
-      <p>Self-updating RAG system that continuously monitors, indexes, and queries newly published ML papers. Semantic answers over a live knowledge base with no manual ingestion.</p>
-      <div class="tech-row"><span class="tech">RAG</span><span class="tech">Vector DB</span><span class="tech">Streamlit</span><span class="tech">LLM</span></div>
-      <a class="proj-link" href="https://github.com/alpha9934/ArXiv-GenAI-Research-Paper-Answer-Bot-Agentic-RAG-System" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> ArXiv-GenAI-Bot</a>
+
+    <!-- P2: PROJECT INTELLIGENCE COPILOT -->
+    <div class="pcard" data-tags="rag ent">
+      <div class="pcard-bar">
+        <div class="pcard-badges">
+          <span class="pbadge pb-ai">GenAI</span>
+          <span class="pbadge pb-inf">Infrastructure</span>
+          <span class="pbadge pb-rs">RAG</span>
+        </div>
+        <div class="pcard-icon"><i class="ti ti-building-skyscraper"></i></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-title">L&amp;T Project Intelligence Copilot</div>
+        <p class="pcard-desc">Enterprise-grade RAG copilot acting as a proactive control tower for heavy infrastructure projects (L&amp;T). Ingests Contracts, BOQs, Meeting Minutes, and Vendor Emails into Pinecone serverless, then uses hallucination-resistant RAG to instantly detect delays, calculate risk scores, and cite exact contract clauses as evidence.</p>
+        <div class="arch-toggle" onclick="toggleArch(this)">
+          <span class="arrow">&#9658;</span> Architecture Flow
+        </div>
+        <div class="arch-box">
+          <div class="al"><span class="al-n">Data Pipeline</span><span class="al-v">PyPDF &middot; TextSplitter &middot; semantic chunking</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Vector Memory</span><span class="al-v">OpenAI text-embedding-3-small &middot; Pinecone (1536-dim)</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Orchestration</span><span class="al-v">LangChain LCEL &middot; query understanding &middot; top-K retrieval</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Guardrails</span><span class="al-v">Pydantic JSON schema &middot; strict output validation</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Frontend</span><span class="al-v">Streamlit control tower &middot; evidence citations &middot; risk scores</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech">Python</span><span class="tech">LangChain</span><span class="tech">Pinecone</span><span class="tech">FastAPI</span><span class="tech">OpenAI</span><span class="tech">Streamlit</span><span class="tech">Pydantic</span><span class="tech">Pytest</span><span class="tech">Docker</span>
+        </div>
+      </div>
+      <div class="pcard-foot">
+        <a class="pcard-link" href="https://github.com/alpha9934/Project-Intelligence-Copilot" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> Project-Intelligence-Copilot</a>
+        <span class="pcard-stat">Vector: <span>1536-dim</span></span>
+      </div>
     </div>
-    <div class="proj-card">
-      <div class="proj-cat">GenAI &middot; InsurTech</div>
-      <h3>Enterprise Insurance AI &mdash; Claims Automation</h3>
-      <p>Conversational agent and backend pipeline automating claims parsing, policy validation, and risk assessment with LLMOps monitoring for enterprise insurance workflows.</p>
-      <div class="tech-row"><span class="tech">Agentic AI</span><span class="tech">AWS</span><span class="tech">Vector DB</span><span class="tech">LLMOps</span></div>
-      <a class="proj-link" href="https://github.com/alpha9934/insurance-ai-bot" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> insurance-ai-bot</a>
+
+    <!-- P3: INSUREINTEL AI -->
+    <div class="pcard" data-tags="rag ent">
+      <div class="pcard-bar">
+        <div class="pcard-badges">
+          <span class="pbadge pb-ai">GenAI</span>
+          <span class="pbadge pb-ins">InsurTech</span>
+          <span class="pbadge pb-rs">Agentic RAG</span>
+        </div>
+        <div class="pcard-icon"><i class="ti ti-heart-rate-monitor"></i></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-title">InsureIntel AI &mdash; Agentic Insurance Copilot</div>
+        <p class="pcard-desc">Enterprise GenAI platform for analyzing massive encrypted insurance policies (160K-token PDFs that exceed LLM context limits). Uses GPT-4o with LangChain tool binding to autonomously trigger Tavily web search when internal policy data is missing &mdash; resolving compliance codes and regulatory frameworks without hallucinating clauses.</p>
+        <div class="arch-toggle" onclick="toggleArch(this)">
+          <span class="arrow">&#9658;</span> Architecture Flow
+        </div>
+        <div class="arch-box">
+          <div class="al"><span class="al-n">Ingestion</span><span class="al-v">PyPDF &middot; high-fidelity chunking &middot; token-aware splitting</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Agent Core</span><span class="al-v">GPT-4o &middot; LangChain bind_tools &middot; function calling</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Web Fallback</span><span class="al-v">Tavily Search API &middot; triggered only on context gap</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Merge Layer</span><span class="al-v">doc context + web results &middot; deduplication &middot; grounding</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Frontend</span><span class="al-v">Next.js &middot; React &middot; Tailwind &middot; drag-and-drop upload</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech">Python</span><span class="tech">FastAPI</span><span class="tech">GPT-4o</span><span class="tech">LangChain</span><span class="tech">LangGraph</span><span class="tech">Tavily API</span><span class="tech">Next.js</span><span class="tech">Tailwind</span><span class="tech">Docker</span><span class="tech">TypeScript</span>
+        </div>
+      </div>
+      <div class="pcard-foot">
+        <a class="pcard-link" href="https://github.com/alpha9934/insurance-ai-bot" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> insurance-ai-bot</a>
+        <span class="pcard-stat">LLM: <span>GPT-4o</span></span>
+      </div>
     </div>
-    <div class="proj-card">
-      <div class="proj-cat">GenAI &middot; Cloud</div>
-      <h3>Project Intelligence Copilot for Cloud Infrastructure</h3>
-      <p>Enterprise AI copilot that indexes and reasons over complex cloud infrastructure documents, enabling teams to query architecture decisions in plain language with traceable answers.</p>
-      <div class="tech-row"><span class="tech">Agentic AI</span><span class="tech">AWS</span><span class="tech">Vector DB</span><span class="tech">LangFuse</span></div>
-      <a class="proj-link" href="https://github.com/alpha9934/project-intelligence-copilot" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> project-intelligence-copilot</a>
+
+    <!-- P4: TRADESAGE — HALLUCINATION -->
+    <div class="pcard" data-tags="rag mcp">
+      <div class="pcard-bar">
+        <div class="pcard-badges">
+          <span class="pbadge pb-ai">GenAI</span>
+          <span class="pbadge pb-fin">BFSI</span>
+          <span class="pbadge pb-rs">Eval Pipeline</span>
+        </div>
+        <div class="pcard-icon"><i class="ti ti-chart-candle"></i></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-title">TradeSage AI &mdash; Hallucination Elimination in BFSI</div>
+        <p class="pcard-desc">Production Agentic RAG system with a dual-agent evaluation pipeline. RAGAS faithfulness scoring + LangFuse observability create strict quality gates that catch silent production failures before they hit end-users. Designed for BFSI where a hallucinated clause can trigger regulatory action.</p>
+        <div class="arch-toggle" onclick="toggleArch(this)">
+          <span class="arrow">&#9658;</span> Architecture Flow
+        </div>
+        <div class="arch-box">
+          <div class="al"><span class="al-n">RAG Pipeline</span><span class="al-v">Retrieval &middot; reranking &middot; context assembly</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Eval Agent</span><span class="al-v">RAGAS faithfulness &middot; context recall &middot; answer relevancy</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Observability</span><span class="al-v">LangFuse traces &middot; latency &middot; cost tracking</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Quality Gate</span><span class="al-v">CI via GitHub Actions &middot; score threshold enforcement</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech">Python</span><span class="tech">Agentic AI</span><span class="tech">RAGAS</span><span class="tech">LangFuse</span><span class="tech">GitHub Actions</span><span class="tech">LangChain</span>
+        </div>
+      </div>
+      <div class="pcard-foot">
+        <a class="pcard-link" href="https://github.com/alpha9934/TradeSage-AI" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> TradeSage-AI</a>
+        <span class="pcard-stat">Eval: <span>RAGAS</span></span>
+      </div>
     </div>
-  </div>
+
+    <!-- P5: ARXIV BOT -->
+    <div class="pcard" data-tags="rag">
+      <div class="pcard-bar">
+        <div class="pcard-badges">
+          <span class="pbadge pb-ai">GenAI</span>
+          <span class="pbadge pb-rs">Live RAG</span>
+        </div>
+        <div class="pcard-icon"><i class="ti ti-books"></i></div>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-title">ArXiv Research Intelligence Bot</div>
+        <p class="pcard-desc">Self-updating RAG system that continuously monitors and indexes newly published ML papers on ArXiv. No manual ingestion &mdash; the knowledge base stays live. Researchers get semantic answers over the latest papers with full source attribution, making lit-review instant.</p>
+        <div class="arch-toggle" onclick="toggleArch(this)">
+          <span class="arrow">&#9658;</span> Architecture Flow
+        </div>
+        <div class="arch-box">
+          <div class="al"><span class="al-n">Data Feed</span><span class="al-v">ArXiv API &middot; scheduled polling &middot; dedup by paper ID</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">Indexing</span><span class="al-v">Embeddings &middot; vector store upsert &middot; metadata tagging</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">RAG Core</span><span class="al-v">Semantic search &middot; answer grounding &middot; citation attribution</span></div>
+          <div class="aa">&#8595;</div>
+          <div class="al"><span class="al-n">UI</span><span class="al-v">Streamlit &middot; paper cards &middot; source links</span></div>
+        </div>
+        <div class="tech-row">
+          <span class="tech">Python</span><span class="tech">RAG</span><span class="tech">Vector DB</span><span class="tech">Streamlit</span><span class="tech">LLM</span><span class="tech">ArXiv API</span>
+        </div>
+      </div>
+      <div class="pcard-foot">
+        <a class="pcard-link" href="https://github.com/alpha9934/ArXiv-GenAI-Research-Paper-Answer-Bot-Agentic-RAG-System" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> ArXiv-GenAI-Bot</a>
+        <span class="pcard-stat">Type: <span>Live RAG</span></span>
+      </div>
+    </div>
+
+
+    </div><!-- /tab-all -->
 </section>
 
 <div class="div"></div>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="sec-eye">Technical Stack</div>
   <h2 class="sec-title">What I Bring</h2>
   <p class="sec-sub">The full stack of senior AI engineering &mdash; from protocol design to production observability.</p>
   <div class="skills-grid">
-    <div class="sk-card fade-in"><div class="sk-icon"><i class="ti ti-network" aria-hidden="true"></i></div><h3>MCP Architecture</h3><p class="sk-desc">Controlled data access between LLMs and enterprise systems &mdash; auth, sanitisation, audit, output filtering. No LLM touches a database directly.</p><div class="sk-tags"><span class="sk-tag">MCP SDK</span><span class="sk-tag">Tool Design</span><span class="sk-tag">RBAC</span><span class="sk-tag">Input Sanitisation</span><span class="sk-tag">Audit Logging</span></div></div>
-    <div class="sk-card fade-in"><div class="sk-icon"><i class="ti ti-brain" aria-hidden="true"></i></div><h3>Multi-LLM Orchestration</h3><p class="sk-desc">Dual-LLM pipelines with distinct roles, async execution, structured JSON outputs, Pydantic validation, and hallucination verification on every output.</p><div class="sk-tags"><span class="sk-tag">LangChain</span><span class="sk-tag">LlamaIndex</span><span class="sk-tag">Gemini</span><span class="sk-tag">Groq</span><span class="sk-tag">Prompt Versioning</span></div></div>
-    <div class="sk-card fade-in"><div class="sk-icon"><i class="ti ti-eye" aria-hidden="true"></i></div><h3>LLMOps &amp; Evaluation</h3><p class="sk-desc">Monitoring, tracing, and quality-gating LLM pipelines. RAGAS faithfulness, hallucination checks, and governance gates before output reaches reviewers.</p><div class="sk-tags"><span class="sk-tag">LangFuse</span><span class="sk-tag">RAGAS</span><span class="sk-tag">MLflow</span><span class="sk-tag">DagsHub</span><span class="sk-tag">Eval Pipelines</span></div></div>
-    <div class="sk-card fade-in"><div class="sk-icon"><i class="ti ti-chart-bar" aria-hidden="true"></i></div><h3>ML + Explainability</h3><p class="sk-desc">Hybrid ML/LLM systems where XGBoost provides auditable SHAP scores and LLMs handle communication &mdash; the right tool for each job.</p><div class="sk-tags"><span class="sk-tag">XGBoost</span><span class="sk-tag">SHAP</span><span class="sk-tag">Feature Engineering</span><span class="sk-tag">Model Registry</span></div></div>
-    <div class="sk-card fade-in"><div class="sk-icon"><i class="ti ti-search" aria-hidden="true"></i></div><h3>RAG &amp; Vector Systems</h3><p class="sk-desc">Semantic search, embedding pipelines, hybrid retrieval, and self-updating knowledge bases with strict citation verification.</p><div class="sk-tags"><span class="sk-tag">Pinecone</span><span class="sk-tag">Chroma</span><span class="sk-tag">FAISS</span><span class="sk-tag">Hybrid Search</span><span class="sk-tag">Hallucination Check</span></div></div>
-    <div class="sk-card fade-in"><div class="sk-icon"><i class="ti ti-cloud" aria-hidden="true"></i></div><h3>Cloud &amp; Infra</h3><p class="sk-desc">Deploying AI systems on serverless and managed cloud with CI/CD &mdash; production architecture on a startup budget.</p><div class="sk-tags"><span class="sk-tag">AWS</span><span class="sk-tag">FastAPI</span><span class="sk-tag">Docker</span><span class="sk-tag">Render</span><span class="sk-tag">GitHub Actions</span><span class="sk-tag">HF Spaces</span></div></div>
+    <div class="sk-card fade-in">
+      <div class="sk-icon"><i class="ti ti-network"></i></div>
+      <h3>MCP Architecture</h3>
+      <p class="sk-desc">Controlled data access between LLMs and enterprise systems &mdash; auth, sanitisation, audit, output filtering. No LLM touches a database directly.</p>
+      <div class="sk-tags"><span class="sk-tag">MCP SDK</span><span class="sk-tag">Tool Design</span><span class="sk-tag">RBAC</span><span class="sk-tag">Audit Logging</span><span class="sk-tag">Input Sanitisation</span></div>
+    </div>
+    <div class="sk-card fade-in">
+      <div class="sk-icon"><i class="ti ti-brain"></i></div>
+      <h3>Multi-LLM Orchestration</h3>
+      <p class="sk-desc">Dual-LLM pipelines with distinct roles, async execution, structured JSON, Pydantic validation, and hallucination verification on every output.</p>
+      <div class="sk-tags"><span class="sk-tag">LangChain</span><span class="sk-tag">LangGraph</span><span class="sk-tag">Gemini</span><span class="sk-tag">GPT-4o</span><span class="sk-tag">Groq</span><span class="sk-tag">Prompt Versioning</span></div>
+    </div>
+    <div class="sk-card fade-in">
+      <div class="sk-icon"><i class="ti ti-eye"></i></div>
+      <h3>LLMOps &amp; Evaluation</h3>
+      <p class="sk-desc">Monitoring, tracing, and quality-gating LLM pipelines. RAGAS faithfulness, hallucination checks, and governance gates before output reaches reviewers.</p>
+      <div class="sk-tags"><span class="sk-tag">LangFuse</span><span class="sk-tag">RAGAS</span><span class="sk-tag">MLflow</span><span class="sk-tag">DagsHub</span><span class="sk-tag">Eval Pipelines</span></div>
+    </div>
+    <div class="sk-card fade-in">
+      <div class="sk-icon"><i class="ti ti-search"></i></div>
+      <h3>RAG &amp; Vector Systems</h3>
+      <p class="sk-desc">Semantic search, embedding pipelines, hybrid retrieval, agentic web-search fallback, and self-updating knowledge bases.</p>
+      <div class="sk-tags"><span class="sk-tag">Pinecone</span><span class="sk-tag">Chroma</span><span class="sk-tag">FAISS</span><span class="sk-tag">Tavily</span><span class="sk-tag">Hybrid Search</span><span class="sk-tag">Reranking</span></div>
+    </div>
+    <div class="sk-card fade-in">
+      <div class="sk-icon"><i class="ti ti-chart-bar"></i></div>
+      <h3>ML + Explainability</h3>
+      <p class="sk-desc">Hybrid ML/LLM systems where XGBoost provides auditable SHAP scores and LLMs handle communication &mdash; the right tool for each job.</p>
+      <div class="sk-tags"><span class="sk-tag">XGBoost</span><span class="sk-tag">SHAP</span><span class="sk-tag">Feature Engineering</span><span class="sk-tag">Model Registry</span><span class="sk-tag">Pydantic</span></div>
+    </div>
+    <div class="sk-card fade-in">
+      <div class="sk-icon"><i class="ti ti-cloud"></i></div>
+      <h3>Cloud, Data &amp; Infra</h3>
+      <p class="sk-desc">Deploying AI systems on serverless and managed cloud with CI/CD. Also: Snowflake SCD pipelines, Kafka, NiFi, and Redis for data-intensive AI backends.</p>
+      <div class="sk-tags"><span class="sk-tag">AWS</span><span class="sk-tag">FastAPI</span><span class="sk-tag">Docker</span><span class="sk-tag">Snowflake</span><span class="sk-tag">Kafka</span><span class="sk-tag">Next.js</span><span class="sk-tag">Render</span></div>
+    </div>
   </div>
 </section>
 
 <div class="div"></div>
 
+<!-- CONTACT -->
 <section id="contact">
   <div class="sec-eye">Let&rsquo;s Talk</div>
   <h2 class="sec-title">Open to Senior AI Roles</h2>
   <p class="sec-sub">Looking for Senior AI Engineer or AI Engineering roles where production reliability and architectural depth matter.</p>
   <div class="contact-grid fade-in">
     <a class="cc" href="https://github.com/alpha9934" target="_blank" rel="noopener">
-      <div class="cc-icon"><i class="ti ti-brand-github" aria-hidden="true"></i></div>
+      <div class="cc-icon"><i class="ti ti-brand-github"></i></div>
       <div><div class="cc-label">GitHub</div><div class="cc-val">github.com/alpha9934</div></div>
     </a>
     <a class="cc" href="https://alpha9934.github.io/my-portfolio/" target="_blank" rel="noopener">
-      <div class="cc-icon"><i class="ti ti-world" aria-hidden="true"></i></div>
+      <div class="cc-icon"><i class="ti ti-world"></i></div>
       <div><div class="cc-label">Portfolio</div><div class="cc-val">alpha9934.github.io</div></div>
     </a>
-    <a class="cc full" href="https://www.linkedin.com/in/abhishek-kumar-gupta-data-ai/" target="_blank" rel="noopener">
-      <div class="cc-icon"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></div>
+    <a class="cc full" href="https://www.linkedin.com/in/abhishek-kumar-gupta-9934/" target="_blank" rel="noopener">
+      <div class="cc-icon"><i class="ti ti-brand-linkedin"></i></div>
       <div><div class="cc-label">LinkedIn &mdash; Senior AI Engineer Opportunities</div><div class="cc-val">Connect for Senior AI roles &#8599;</div></div>
     </a>
   </div>
@@ -355,219 +549,74 @@
   <p>Senior AI Engineer &middot; Built with Claude</p>
 </footer>
 
-</div>
+</div><!-- /wrap -->
 
 <script>
 // ── CANVAS BACKGROUND ──────────────────────────────────────────
 (function(){
-  const C = document.getElementById('bg-canvas');
-  const ctx = C.getContext('2d');
-  let W, H, nodes, kws, frame = 0;
-
-  const COLORS = [
-    [124,111,255], [0,229,192], [0,212,255], [255,110,180], [176,159,255]
-  ];
-
-  const WORDS = [
-    'RAG','MCP','LLM','SHAP','RAGAS','XGBoost','FastAPI',
-    'Vector DB','LangFuse','Agentic AI','LLMOps','Transformer',
-    'Embeddings','Attention','Inference','Fine-tune','Hallucination',
-    'Pydantic','Kafka','Snowflake','AWS','Docker','BFSI','FinTech',
-    'Compliance','AML','Neural Net','Prompt','Token','GPT',
-    'Diffusion','RLHF','Chain-of-Thought','MLflow','Pinecone',
-    'FAISS','Chroma','Groq','Gemini','LangChain','LlamaIndex',
-  ];
-
-  function rgba(c, a){ return `rgba(${c[0]},${c[1]},${c[2]},${a})`; }
-
-  class Node {
-    constructor(){ this.reset(true); }
-    reset(init){
-      this.x  = Math.random() * W;
-      this.y  = init ? Math.random() * H : (Math.random()>.5 ? -20 : H+20);
-      this.r  = Math.random()*2.2+.8;
-      this.vx = (Math.random()-.5)*.4;
-      this.vy = (Math.random()-.5)*.4;
-      this.c  = COLORS[Math.floor(Math.random()*COLORS.length)];
-      this.ph = Math.random()*Math.PI*2;
-      this.ps = .02+Math.random()*.03;
-    }
-    update(){
-      this.x+=this.vx; this.y+=this.vy; this.ph+=this.ps;
-      if(this.x<-50||this.x>W+50||this.y<-50||this.y>H+50) this.reset(false);
-    }
-    draw(){
-      const g=.35+Math.sin(this.ph)*.3;
-      ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
-      ctx.fillStyle=rgba(this.c,g); ctx.fill();
-      ctx.beginPath(); ctx.arc(this.x,this.y,this.r*4,0,Math.PI*2);
-      ctx.fillStyle=rgba(this.c,g*.08); ctx.fill();
-    }
+  const C=document.getElementById('bg-canvas');
+  const ctx=C.getContext('2d');
+  let W,H,nodes,kws,frame=0;
+  const COLORS=[[124,111,255],[0,229,192],[0,212,255],[255,110,180],[176,159,255]];
+  const WORDS=['RAG','MCP','LLM','SHAP','RAGAS','XGBoost','FastAPI','Vector DB','LangFuse','Agentic AI','LLMOps','Transformer','Embeddings','Attention','Inference','Fine-tune','Hallucination','Pydantic','Kafka','Snowflake','Pinecone','AWS','Docker','BFSI','FinTech','Compliance','AML','Neural Net','Prompt','Token','GPT-4o','Groq','Gemini','LangChain','LangGraph','Tavily','FAISS','Chroma','MLflow','Next.js','FastAPI','Uvicorn'];
+  const rgba=(c,a)=>`rgba(${c[0]},${c[1]},${c[2]},${a})`;
+  class Node{
+    constructor(){this.reset(true)}
+    reset(init){this.x=Math.random()*W;this.y=init?Math.random()*H:(Math.random()>.5?-20:H+20);this.r=Math.random()*2.2+.8;this.vx=(Math.random()-.5)*.4;this.vy=(Math.random()-.5)*.4;this.c=COLORS[Math.floor(Math.random()*COLORS.length)];this.ph=Math.random()*Math.PI*2;this.ps=.02+Math.random()*.03}
+    update(){this.x+=this.vx;this.y+=this.vy;this.ph+=this.ps;if(this.x<-50||this.x>W+50||this.y<-50||this.y>H+50)this.reset(false)}
+    draw(){const g=.35+Math.sin(this.ph)*.3;ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=rgba(this.c,g);ctx.fill();ctx.beginPath();ctx.arc(this.x,this.y,this.r*4,0,Math.PI*2);ctx.fillStyle=rgba(this.c,g*.08);ctx.fill()}
   }
-
-  class KW {
-    constructor(){ this.reset(true); }
-    reset(init){
-      this.w   = WORDS[Math.floor(Math.random()*WORDS.length)];
-      this.x   = Math.random()*W;
-      this.y   = init ? Math.random()*H : H+30;
-      this.vy  = -(Math.random()*.3+.08);
-      this.a   = 0;
-      this.mA  = Math.random()*.1+.03;
-      this.sz  = Math.floor(Math.random()*3+9);
-      this.c   = COLORS[Math.floor(Math.random()*3)];
-      this.life= 0;
-      this.max = 350+Math.random()*500;
-    }
-    update(){
-      this.y+=this.vy; this.life++;
-      const t=this.life/this.max;
-      this.a = t<.15?(t/.15)*this.mA : t>.75?((1-t)/.25)*this.mA : this.mA;
-      if(this.life>=this.max) this.reset(false);
-    }
-    draw(){
-      ctx.font=`${this.sz}px 'JetBrains Mono',monospace`;
-      ctx.fillStyle=rgba(this.c,this.a);
-      ctx.fillText(this.w,this.x,this.y);
-    }
+  class KW{
+    constructor(){this.reset(true)}
+    reset(init){this.w=WORDS[Math.floor(Math.random()*WORDS.length)];this.x=Math.random()*W;this.y=init?Math.random()*H:H+30;this.vy=-(Math.random()*.3+.08);this.a=0;this.mA=Math.random()*.1+.03;this.sz=Math.floor(Math.random()*3+9);this.c=COLORS[Math.floor(Math.random()*3)];this.life=0;this.max=350+Math.random()*500}
+    update(){this.y+=this.vy;this.life++;const t=this.life/this.max;this.a=t<.15?(t/.15)*this.mA:t>.75?((1-t)/.25)*this.mA:this.mA;if(this.life>=this.max)this.reset(false)}
+    draw(){ctx.font=`${this.sz}px 'JetBrains Mono',monospace`;ctx.fillStyle=rgba(this.c,this.a);ctx.fillText(this.w,this.x,this.y)}
   }
-
-  let scanY=0, scanDir=1;
-
-  function resize(){
-    W=C.width=window.innerWidth; H=C.height=window.innerHeight;
-    if(!nodes){
-      const n=Math.min(Math.floor(W*H/12000),100);
-      nodes=Array.from({length:n},()=>new Node());
-      kws=Array.from({length:22},()=>new KW());
-    }
-  }
-
-  function drawGrid(){
-    ctx.strokeStyle='rgba(100,80,255,.025)'; ctx.lineWidth=.5;
-    for(let x=0;x<W;x+=80){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
-    for(let y=0;y<H;y+=80){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
-  }
-
-  function drawEdges(){
-    const D=150;
-    for(let i=0;i<nodes.length;i++){
-      for(let j=i+1;j<nodes.length;j++){
-        const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
-        const d=Math.sqrt(dx*dx+dy*dy);
-        if(d<D){
-          const a=(1-d/D)*.16;
-          const c=nodes[i].c;
-          ctx.beginPath(); ctx.moveTo(nodes[i].x,nodes[i].y); ctx.lineTo(nodes[j].x,nodes[j].y);
-          ctx.strokeStyle=rgba(c,a); ctx.lineWidth=(1-d/D)*.8; ctx.stroke();
-        }
-      }
-    }
-  }
-
-  function drawScan(){
-    scanY+=scanDir*.7;
-    if(scanY>H){scanY=H;scanDir=-1;} if(scanY<0){scanY=0;scanDir=1;}
-    const g=ctx.createLinearGradient(0,scanY-70,0,scanY+70);
-    g.addColorStop(0,'rgba(0,229,192,0)'); g.addColorStop(.5,'rgba(0,229,192,.025)'); g.addColorStop(1,'rgba(0,229,192,0)');
-    ctx.fillStyle=g; ctx.fillRect(0,scanY-70,W,140);
-    ctx.beginPath(); ctx.moveTo(0,scanY); ctx.lineTo(W,scanY);
-    ctx.strokeStyle='rgba(0,229,192,.06)'; ctx.lineWidth=1; ctx.stroke();
-  }
-
-  function drawHex(){
-    const hexes=[{cx:W*.05,cy:H*.1,r:55},{cx:W*.95,cy:H*.88,r:75},{cx:W*.92,cy:H*.08,r:40}];
-    const p=Math.sin(frame*.012)*.5+.5;
-    hexes.forEach(({cx,cy,r})=>{
-      for(let ring=1;ring<=3;ring++){
-        ctx.beginPath();
-        for(let i=0;i<6;i++){
-          const a=(Math.PI/3)*i-Math.PI/6;
-          const px=cx+r*ring*Math.cos(a), py=cy+r*ring*Math.sin(a);
-          i===0?ctx.moveTo(px,py):ctx.lineTo(px,py);
-        }
-        ctx.closePath();
-        ctx.strokeStyle=`rgba(124,111,255,${.045*p/ring})`;
-        ctx.lineWidth=.5; ctx.stroke();
-      }
-    });
-  }
-
-  function drawStreams(){
-    [W*.12,W*.38,W*.62,W*.88].forEach((x,i)=>{
-      const off=(frame*1.2+i*180)%H;
-      for(let s=0;s<4;s++){
-        const y=(off+s*(H/4))%H, len=25+Math.random()*50;
-        const a=Math.random()*.05;
-        const g=ctx.createLinearGradient(0,y,0,y+len);
-        g.addColorStop(0,'rgba(0,229,192,0)'); g.addColorStop(.5,`rgba(0,229,192,${a})`); g.addColorStop(1,'rgba(0,229,192,0)');
-        ctx.fillStyle=g; ctx.fillRect(x-.5,y,1,len);
-      }
-    });
-  }
-
-  // Glowing ring pulse in background
-  function drawPulseRings(){
-    const cx=W*.75, cy=H*.25;
-    const p=(frame*.008)%(Math.PI*2);
-    for(let r=1;r<=4;r++){
-      const radius=80*r+Math.sin(p+r)*15;
-      const a=(.06/r)*(.5+Math.sin(p+r)*.4);
-      ctx.beginPath(); ctx.arc(cx,cy,radius,0,Math.PI*2);
-      ctx.strokeStyle=`rgba(124,111,255,${a})`; ctx.lineWidth=.8; ctx.stroke();
-    }
-    // second ring cluster
-    const cx2=W*.18, cy2=H*.72;
-    for(let r=1;r<=3;r++){
-      const radius=60*r+Math.sin(p+r+1)*12;
-      const a=(.05/r)*(.5+Math.sin(p+r+1)*.4);
-      ctx.beginPath(); ctx.arc(cx2,cy2,radius,0,Math.PI*2);
-      ctx.strokeStyle=`rgba(0,229,192,${a})`; ctx.lineWidth=.6; ctx.stroke();
-    }
-  }
-
-  function loop(){
-    frame++;
-    ctx.clearRect(0,0,W,H);
-    drawGrid();
-    drawHex();
-    drawPulseRings();
-    drawStreams();
-    drawScan();
-    drawEdges();
-    nodes.forEach(n=>{n.update();n.draw();});
-    kws.forEach(k=>{k.update();k.draw();});
-    requestAnimationFrame(loop);
-  }
-
-  window.addEventListener('resize',resize);
-  resize(); loop();
+  let scanY=0,scanDir=1;
+  function resize(){W=C.width=window.innerWidth;H=C.height=window.innerHeight;if(!nodes){const n=Math.min(Math.floor(W*H/12000),100);nodes=Array.from({length:n},()=>new Node());kws=Array.from({length:22},()=>new KW())}}
+  function drawGrid(){ctx.strokeStyle='rgba(100,80,255,.025)';ctx.lineWidth=.5;for(let x=0;x<W;x+=80){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}for(let y=0;y<H;y+=80){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}}
+  function drawEdges(){const D=150;for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<D){ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.strokeStyle=rgba(nodes[i].c,(1-d/D)*.16);ctx.lineWidth=(1-d/D)*.8;ctx.stroke()}}}
+  function drawScan(){scanY+=scanDir*.7;if(scanY>H){scanY=H;scanDir=-1}if(scanY<0){scanY=0;scanDir=1}const g=ctx.createLinearGradient(0,scanY-70,0,scanY+70);g.addColorStop(0,'rgba(0,229,192,0)');g.addColorStop(.5,'rgba(0,229,192,.025)');g.addColorStop(1,'rgba(0,229,192,0)');ctx.fillStyle=g;ctx.fillRect(0,scanY-70,W,140);ctx.beginPath();ctx.moveTo(0,scanY);ctx.lineTo(W,scanY);ctx.strokeStyle='rgba(0,229,192,.06)';ctx.lineWidth=1;ctx.stroke()}
+  function drawHex(){const hexes=[{cx:W*.05,cy:H*.1,r:55},{cx:W*.95,cy:H*.88,r:75},{cx:W*.92,cy:H*.08,r:40}];const p=Math.sin(frame*.012)*.5+.5;hexes.forEach(({cx,cy,r})=>{for(let ring=1;ring<=3;ring++){ctx.beginPath();for(let i=0;i<6;i++){const a=(Math.PI/3)*i-Math.PI/6;i===0?ctx.moveTo(cx+r*ring*Math.cos(a),cy+r*ring*Math.sin(a)):ctx.lineTo(cx+r*ring*Math.cos(a),cy+r*ring*Math.sin(a))}ctx.closePath();ctx.strokeStyle=`rgba(124,111,255,${.045*p/ring})`;ctx.lineWidth=.5;ctx.stroke()}})}
+  function drawStreams(){[W*.12,W*.38,W*.62,W*.88].forEach((x,i)=>{const off=(frame*1.2+i*180)%H;for(let s=0;s<4;s++){const y=(off+s*(H/4))%H,len=25+Math.random()*50,a=Math.random()*.05;const g=ctx.createLinearGradient(0,y,0,y+len);g.addColorStop(0,'rgba(0,229,192,0)');g.addColorStop(.5,`rgba(0,229,192,${a})`);g.addParameter&&g.addColorStop(1,'rgba(0,229,192,0)');g.addColorStop(1,'rgba(0,229,192,0)');ctx.fillStyle=g;ctx.fillRect(x-.5,y,1,len)}})}
+  function drawRings(){const pairs=[{cx:W*.75,cy:H*.25,c:'124,111,255'},{cx:W*.18,cy:H*.72,c:'0,229,192'}];const p=frame*.008;pairs.forEach(({cx,cy,c})=>{for(let r=1;r<=4;r++){const rad=80*r+Math.sin(p+r)*15,a=(.06/r)*(.5+Math.sin(p+r)*.4);ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.strokeStyle=`rgba(${c},${a})`;ctx.lineWidth=.8;ctx.stroke()}})}
+  function loop(){frame++;ctx.clearRect(0,0,W,H);drawGrid();drawHex();drawRings();drawStreams();drawScan();drawEdges();nodes.forEach(n=>{n.update();n.draw()});kws.forEach(k=>{k.update();k.draw()});requestAnimationFrame(loop)}
+  window.addEventListener('resize',resize);resize();loop();
 })();
 
+// ── ARCH TOGGLE ────────────────────────────────────────────────
+function toggleArch(btn){
+  const box=btn.nextElementSibling;
+  btn.classList.toggle('open');
+  box.classList.toggle('open');
+}
+
+// ── PROJECT TABS ───────────────────────────────────────────────
+document.querySelectorAll('.ptab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const key=tab.dataset.tab;
+    const panel=document.getElementById('tab-all');
+    panel.classList.add('active');
+    document.querySelectorAll('.pcard').forEach(card=>{
+      if(key==='all'){card.style.display='flex'}
+      else{card.style.display=card.dataset.tags&&card.dataset.tags.includes(key)?'flex':'none'}
+    });
+  });
+});
+
 // ── SCROLL FADE-IN ─────────────────────────────────────────────
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
-},{threshold:.08});
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.08});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 
 // ── ACTIVE NAV ─────────────────────────────────────────────────
 const secs=document.querySelectorAll('section[id]');
 const nls=document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll',()=>{
-  let cur='';
-  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id;});
-  nls.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--accent2)':'';});
-},{passive:true});
+window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)cur=s.id});nls.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+cur?'var(--accent2)':''})},{passive:true});
 
 // ── MOUSE PARALLAX ─────────────────────────────────────────────
-document.addEventListener('mousemove',e=>{
-  const mx=(e.clientX/window.innerWidth-.5)*22;
-  const my=(e.clientY/window.innerHeight-.5)*22;
-  document.querySelectorAll('.orb').forEach((o,i)=>{
-    const f=(i+1)*.4;
-    o.style.transform=`translate(${mx*f}px,${my*f}px)`;
-  });
-});
+document.addEventListener('mousemove',e=>{const mx=(e.clientX/window.innerWidth-.5)*22,my=(e.clientY/window.innerHeight-.5)*22;document.querySelectorAll('.orb').forEach((o,i)=>{const f=(i+1)*.4;o.style.transform=`translate(${mx*f}px,${my*f}px)`})});
 </script>
 </body>
 </html>
