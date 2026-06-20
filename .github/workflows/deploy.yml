@@ -1,7 +1,22 @@
-name: no-op
-on: [push]
+name: Deploy static portfolio
+on:
+  push:
+    branches: ["master"]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
-  skip:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - run: echo "Static site - no build needed"
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - uses: actions/deploy-pages@v4
+        id: deployment
